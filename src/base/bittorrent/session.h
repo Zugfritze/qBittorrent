@@ -395,6 +395,12 @@ namespace BitTorrent
         virtual void setAnnounceIP(const QString &ip) = 0;
         virtual int announcePort() const = 0;
         virtual void setAnnouncePort(int port) = 0;
+        virtual int httpAnnouncePort() const = 0;
+        virtual void setHttpAnnouncePort(int port) = 0;
+        virtual int udpAnnouncePort() const = 0;
+        virtual void setUdpAnnouncePort(int port) = 0;
+        virtual int dhtAnnouncePort() const = 0;
+        virtual void setDhtAnnouncePort(int port) = 0;
         virtual int maxConcurrentHTTPAnnounces() const = 0;
         virtual void setMaxConcurrentHTTPAnnounces(int value) = 0;
         virtual bool isReannounceWhenAddressChangedEnabled() const = 0;

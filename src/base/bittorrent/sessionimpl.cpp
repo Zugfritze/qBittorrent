@@ -5019,6 +5019,45 @@ void SessionImpl::setAnnouncePort(const int port)
     }
 }
 
+int SessionImpl::httpAnnouncePort() const
+{
+    return m_httpAnnouncePort;
+}
+
+void SessionImpl::setHttpAnnouncePort(const int port)
+{
+    if (port != m_httpAnnouncePort)
+    {
+        m_httpAnnouncePort = port;
+    }
+}
+
+int SessionImpl::udpAnnouncePort() const
+{
+    return m_udpAnnouncePort;
+}
+
+void SessionImpl::setUdpAnnouncePort(const int port)
+{
+    if (port != m_udpAnnouncePort)
+    {
+        m_udpAnnouncePort = port;
+    }
+}
+
+int SessionImpl::dhtAnnouncePort() const
+{
+    return m_dhtAnnouncePort;
+}
+
+void SessionImpl::setDhtAnnouncePort(const int port)
+{
+    if (port != m_dhtAnnouncePort)
+    {
+        m_dhtAnnouncePort = port;
+    }
+}
+
 int SessionImpl::maxConcurrentHTTPAnnounces() const
 {
     return m_maxConcurrentHTTPAnnounces;

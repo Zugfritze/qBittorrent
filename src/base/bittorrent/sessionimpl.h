@@ -370,6 +370,12 @@ namespace BitTorrent
         void setAnnounceIP(const QString &ip) override;
         int announcePort() const override;
         void setAnnouncePort(int port) override;
+        int httpAnnouncePort() const override;
+        void setHttpAnnouncePort(int port) override;
+        int udpAnnouncePort() const override;
+        void setUdpAnnouncePort(int port) override;
+        int dhtAnnouncePort() const override;
+        void setDhtAnnouncePort(int port) override;
         int maxConcurrentHTTPAnnounces() const override;
         void setMaxConcurrentHTTPAnnounces(int value) override;
         bool isReannounceWhenAddressChangedEnabled() const override;
@@ -685,6 +691,11 @@ namespace BitTorrent
         CachedSettingValue<bool> m_includeOverheadInLimits;
         CachedSettingValue<QString> m_announceIP;
         CachedSettingValue<int> m_announcePort;
+
+        int m_httpAnnouncePort = 0;
+        int m_udpAnnouncePort = 0;
+        int m_dhtAnnouncePort = 0;
+
         CachedSettingValue<int> m_maxConcurrentHTTPAnnounces;
         CachedSettingValue<bool> m_isReannounceWhenAddressChangedEnabled;
         CachedSettingValue<int> m_stopTrackerTimeout;
