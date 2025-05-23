@@ -60,6 +60,7 @@
 #include "api/apierror.h"
 #include "api/appcontroller.h"
 #include "api/authcontroller.h"
+#include "api/bpqscontroller.h"
 #include "api/logcontroller.h"
 #include "api/rsscontroller.h"
 #include "api/searchcontroller.h"
@@ -737,6 +738,8 @@ void WebApplication::sessionStart()
     m_currentSession->registerAPIController(u"search"_s, new SearchController(app(), m_currentSession));
     m_currentSession->registerAPIController(u"torrents"_s, new TorrentsController(app(), m_currentSession));
     m_currentSession->registerAPIController(u"transfer"_s, new TransferController(app(), m_currentSession));
+
+    m_currentSession->registerAPIController(u"bpqs"_s, new BPQSController(app(), m_currentSession));
 
     const auto *btSession = BitTorrent::Session::instance();
     auto *syncController = new SyncController(app(), m_currentSession);

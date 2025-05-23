@@ -219,6 +219,7 @@ private:
         {{u"torrents"_s, u"toggleSequentialDownload"_s}, Http::METHOD_POST},
         {{u"transfer"_s, u"toggleSpeedLimitsMode"_s}, Http::METHOD_POST},
         {{u"torrents"_s, u"topPrio"_s}, Http::METHOD_POST},
+        {{u"bpqs"_s, u"announcePort"_s}, Http::METHOD_POST},
     };
     bool m_isAltUIUsed = false;
     Path m_rootFolder;
